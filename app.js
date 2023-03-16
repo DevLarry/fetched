@@ -7,6 +7,9 @@ app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json({}));
 app.use(cors());
 app.post("/", (req, res) => {
+	res.send('Hello World');
+}
+app.post("/", (req, res) => {
 	axios
 		.get(req.body.url)
 		.then(result => {
